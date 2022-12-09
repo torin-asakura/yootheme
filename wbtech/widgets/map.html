@@ -11,6 +11,7 @@
   
   #map {
       height: 600px;
+      width: 100%;
   }
 </style>
 <div id="map"></div>
@@ -22,6 +23,8 @@
     center: [36.228,54.423],
     zoom: 3,
   })
+
+  map.scrollZoom.disable()
 
   const addMarker = (lat, lng, imageUrl) => {
     const markerElement = document.createElement('div')
