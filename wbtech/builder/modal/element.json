@@ -2,14 +2,11 @@
     "@import": "./element.php",
     "name": "modal",
     "title": "Modal",
-    "group": "basic",
+    "group": "Atlantis",
     "icon": "${url:images/icon.svg}",
     "iconSmall": "${url:images/iconSmall.svg}",
     "element": true,
     "width": 500,
-    "defaults": {
-        "margin": "default"
-    },
     "placeholder": {
         "props": {
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -20,23 +17,42 @@
         "content": "./templates/content.php"
     },
     "fields": {
+        "title": {
+            "label": "Title",
+            "source": true
+        },
+        "title_element": {
+            "label": "HTML Element",
+            "description": "Choose one of the HTML elements to fit the semantic structure.",
+            "type": "select",
+            "options": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "div"
+            },
+            "enable": "title"
+        },
         "content": {
             "label": "Content",
             "type": "editor",
+            "editor": "code",
+            "mode": "text/html",
             "source": true
         },
-        "animation": "${builder.animation}",
-        "visibility": "${builder.visibility}",
         "name": "${builder.name}",
-        "status": "${builder.status}",
         "source": "${builder.source}",
         "id": "${builder.id}",
+        "status": "${builder.status}",
         "class": "${builder.cls}",
         "attributes": "${builder.attrs}",
         "css": {
+            "type": "editor",
             "label": "CSS",
             "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>",
-            "type": "editor",
             "editor": "code",
             "mode": "css",
             "attrs": {
@@ -50,51 +66,9 @@
             "fields": [
                 {
                     "title": "Content",
-                    "fields": ["content"]
-                },
-                {
-                    "title": "Settings",
                     "fields": [
-                        {
-                            "label": "Text",
-                            "type": "group",
-                            "divider": true,
-                            "fields": [
-                                "dropcap",
-                                "text_style",
-                                "text_size",
-                                "text_color",
-                                "column",
-                                "column_divider",
-                                "column_breakpoint"
-                            ]
-                        },
-                        {
-                            "label": "General",
-                            "type": "group",
-                            "fields": [
-                                "position",
-                                "position_left",
-                                "position_right",
-                                "position_top",
-                                "position_bottom",
-                                "position_z_index",
-                                "margin",
-                                "margin_remove_top",
-                                "margin_remove_bottom",
-                                "maxwidth",
-                                "maxwidth_breakpoint",
-                                "block_align",
-                                "block_align_breakpoint",
-                                "block_align_fallback",
-                                "text_align",
-                                "text_align_breakpoint",
-                                "text_align_fallback",
-                                "animation",
-                                "_parallax_button",
-                                "visibility"
-                            ]
-                        }
+                        "title",
+                        "content"
                     ]
                 },
                 "${builder.advanced}"

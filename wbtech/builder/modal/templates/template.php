@@ -1,13 +1,5 @@
 <?php
 
-$el = $this->el('div', [
+$el = $this->el('div');
 
-    'class' => [
-        'uk-panel',
-    ],
-
-]);
-
-// Column
-
-echo $el();
+echo $el($props, $attrs, $props['content']);
