@@ -1,2 +1,0 @@
-# yootheme
-Yootheme custom workshop

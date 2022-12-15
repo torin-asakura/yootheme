@@ -1,5 +1,11 @@
 <?php
 
-$el = $this->el('div');
+    $el = $this->el($props['modal_element']);
 
-echo $el($props, $attrs, $props['content']);
+?>
+
+<?= $el($props, $attrs) ?>
+<?php foreach ($children as $child) : ?>
+    <div uk-modal><?= $builder->render($child, ['element' => $props]) ?></div>
+<?php endforeach ?>
+<?= $el->end() ?>
