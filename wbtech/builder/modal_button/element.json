@@ -1,6 +1,6 @@
 {
   "@import": "./element.php",
-  "name": "modal_trigger",
+  "name": "modal_button",
   "title": "Modal Button",
   "group": "Atlantis",
   "icon": "${url:images/icon.svg}",
@@ -32,6 +32,34 @@
       "source": true,
       "type": "textarea"
     },
+    "button_style": {
+      "label": "Style",
+      "description": "Set the button style.",
+      "type": "select",
+      "options": {
+        "Default": "default",
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Danger": "danger",
+        "Text": "text",
+        "Link": "",
+        "Link Muted": "link-muted",
+        "Link Text": "link-text"
+      }
+    },
+    "button_size": {
+      "label": "Size",
+      "type": "select",
+      "options": {
+        "Small": "small",
+        "Default": "",
+        "Large": "large"
+      }
+    },
+    "fullwidth": {
+      "type": "checkbox",
+      "text": "Full width button"
+    },
     "css": {
       "type": "editor",
       "label": "CSS",
@@ -52,6 +80,17 @@
           "fields": [
             "content",
             "modal_id"
+          ]
+        },
+        {
+          "title": "Settings",
+          "fields": [
+            {
+              "label": "Button",
+              "type": "group",
+              "divider": true,
+              "fields": ["button_style", "button_size", "fullwidth"]
+            }
           ]
         },
         "${builder.advanced}"
