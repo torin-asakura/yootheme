@@ -1,0 +1,61 @@
+{
+  "@import": "./element.php",
+  "name": "modal_trigger",
+  "title": "Modal Button",
+  "group": "Atlantis",
+  "icon": "${url:images/icon.svg}",
+  "iconSmall": "${url:images/iconSmall.svg}",
+  "width": 500,
+  "element": true,
+  "templates": {
+    "render": "./templates/template.php"
+  },
+  "placeholder": {
+    "props": {
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  "fields": {
+    "modal_id": {
+      "label": "Modal",
+      "description": "Modal ID",
+      "source": true
+    },
+    "name": "${builder.name}",
+    "source": "${builder.source}",
+    "id": "${builder.id}",
+    "status": "${builder.status}",
+    "class": "${builder.cls}",
+    "attributes": "${builder.attrs}",
+    "content": {
+      "label": "Content",
+      "source": true,
+      "type": "textarea"
+    },
+    "css": {
+      "type": "editor",
+      "label": "CSS",
+      "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>",
+      "editor": "code",
+      "mode": "css",
+      "attrs": {
+        "debounce": 500
+      }
+    }
+  },
+  "fieldset": {
+    "default": {
+      "type": "tabs",
+      "fields": [
+        {
+          "title": "Content",
+          "fields": [
+            "content",
+            "modal_id"
+          ]
+        },
+        "${builder.advanced}"
+      ]
+    }
+  }
+}
