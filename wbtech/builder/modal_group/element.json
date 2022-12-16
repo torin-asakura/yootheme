@@ -1,0 +1,20 @@
+{
+    "@import": "./element.php",
+    "name": "modal_group",
+    "title": "Modal Group",
+    "group": "Atlantis",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "templates": {
+        "render": "./templates/template.php"
+    },
+    "fields": {
+        "content": {
+            "label": "Items",
+            "type": "content-items",
+            "item": "modal_item"
+        },
+        "status": "${builder.status}"
+    }
+}
