@@ -15,6 +15,8 @@
         }
     },
     "defaults": {
+        "meta_style": "meta",
+        "meta_element": "div",
         "title_element": "h3"
     },
     "fields": {
@@ -87,6 +89,77 @@
             "source": true,
             "type": "checkbox"
         },
+        "meta": {
+            "label": "Meta",
+            "source": true
+        },
+        "meta_style": {
+            "label": "Style",
+            "description": "Select a predefined meta text style, including color, size and font-family.",
+            "type": "select",
+            "options": {
+                "None": "",
+                "Meta": "meta",
+                "Lead": "lead",
+                "2X-Large": "heading-2xlarge",
+                "X-Large": "heading-xlarge",
+                "Large": "heading-large",
+                "Medium": "heading-medium",
+                "Small": "heading-small",
+                "H1": "h1",
+                "H2": "h2",
+                "H3": "h3",
+                "H4": "h4",
+                "H5": "h5",
+                "H6": "h6"
+            },
+            "enable": "meta"
+        },
+        "meta_color": {
+            "label": "Color",
+            "description": "Select the text color.",
+            "type": "select",
+            "options": {
+                "None": "",
+                "Muted": "muted",
+                "Emphasis": "emphasis",
+                "Primary": "primary",
+                "Secondary": "secondary",
+                "Success": "success",
+                "Warning": "warning",
+                "Danger": "danger"
+            },
+            "enable": "meta"
+        },
+        "meta_element": {
+            "label": "HTML Element",
+            "description": "Choose one of the HTML elements to fit the semantic structure.",
+            "type": "select",
+            "options": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "div"
+            },
+            "enable": "meta"
+        },
+        "meta_margin": {
+            "label": "Margin Top",
+            "description": "Set the top margin. Note that the margin will only apply if the content field immediately follows another content field.",
+            "type": "select",
+            "options": {
+                "Small": "small",
+                "Default": "",
+                "Medium": "medium",
+                "Large": "large",
+                "X-Large": "xlarge",
+                "None": "remove"
+            },
+            "enable": "meta"
+        },
         "name": "${builder.name}",
         "source": "${builder.source}",
         "id": "${builder.id}",
@@ -112,6 +185,7 @@
                     "title": "Content",
                     "fields": [
                         "title",
+                        "meta",
                         "content",
                         "full_width"
                     ]
@@ -127,6 +201,17 @@
                                 "title_style",
                                 "title_color",
                                 "title_element"
+                            ]
+                        },
+                        {
+                            "label": "Meta",
+                            "type": "group",
+                            "divider": true,
+                            "fields": [
+                                "meta_style",
+                                "meta_color",
+                                "meta_element",
+                                "meta_margin"
                             ]
                         }
                     ]
