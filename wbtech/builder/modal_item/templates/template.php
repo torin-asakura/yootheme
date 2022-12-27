@@ -10,7 +10,7 @@
         <?php if ($props['meta']) : ?>
             <<?= $props['meta_element'] ?> class="el-meta uk-text-meta uk-margin<?= $props['meta_margin'] ? '-'.$props['meta_margin'] : '' ?>-top <?= $props['meta_color'] ? 'uk-text-'.$props['meta_color'] : '' ?> <?= $props['meta_style'] ? 'uk-meta-'.$props['meta_style'] : '' ?>"><?= $props['meta'] ?></<?= $props['meta_element'] ?>>
         <?php endif ?>
-        <div class="uk-block"><?= $props['content'] ?></div>
+        <div class="uk-container"><?= $props['content'] ?></div>
     </div>
 </div>
 <?php ?>
