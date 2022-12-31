@@ -1,9 +1,9 @@
 <?php ?>
-    <div uk-modal <?= $props['full_width'] ? 'class="uk-modal-full"' : '' ?> id="<?= $props['id'] ?>">
+    <div uk-modal <?= $props['full_width'] ? 'class="uk-modal-full"' : 'uk-flex-top' ?> id="<?= $props['id'] ?>">
         <?php if ($props['full_width']) : ?>
             <button class="uk-modal-close-default" type="button" uk-close></button>
         <?php endif ?>
-        <div class="uk-modal-dialog uk-modal-body <?= $props['full_width'] ? 'uk-height-1-1' : '' ?>">
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical <?= $props['full_width'] ? 'uk-height-1-1' : '' ?>">
 
         <?php if ($props['full_width']) : ?>
             <div class="uk-position-center">
