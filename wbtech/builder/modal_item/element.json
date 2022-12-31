@@ -162,7 +162,10 @@
         },
         "name": "${builder.name}",
         "source": "${builder.source}",
-        "id": "${builder.id}",
+        "id": {
+            "label": "ID",
+            "source": true
+        },
         "status": "${builder.status}",
         "class": "${builder.cls}",
         "attributes": "${builder.attrs}",
