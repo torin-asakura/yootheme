@@ -1,11 +1,11 @@
 <?php
 
-$link = $props['link'] ? $this->el('a', [
-    'href' => ['{link}'],
-    'target' => ['_blank {@link_target}'],
-    'uk-scroll' => str_starts_with((string) $props['link'], '#'),
-    'uk-toggle' => true
-]) : null;
+$link = $props['link'] ? $this->el('a', explode(' ', $props['attributes']) + [
+        'href' => ['{link}'],
+        'target' => ['_blank {@link_target}'],
+        'uk-scroll' => str_starts_with((string) $props['link'], '#'),
+        'uk-toggle' => true
+    ]) : null;
 
 if ($link && $props['panel_link']) {
 

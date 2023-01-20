@@ -1,7 +1,7 @@
 {
   "@import": "./element.php",
-  "name": "panel",
-  "title": "Panel",
+  "name": "modal_panel",
+  "title": "Modal Panel",
   "group": "Atlantis",
   "icon": "${url:images/icon.svg}",
   "iconSmall": "${url:images/iconSmall.svg}",
@@ -746,7 +746,11 @@
     "source": "${builder.source}",
     "id": "${builder.id}",
     "class": "${builder.cls}",
-    "attributes": "${builder.attrs}",
+    "attributes": {
+      "label": "Attributes",
+      "source": true,
+      "type": "textarea"
+    },
     "css": {
       "label": "CSS",
       "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>, <code>.el-title</code>, <code>.el-meta</code>, <code>.el-content</code>, <code>.el-image</code>, <code>.el-link</code>",
