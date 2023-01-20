@@ -26,7 +26,11 @@
     "id": "${builder.id}",
     "status": "${builder.status}",
     "class": "${builder.cls}",
-    "attributes": "${builder.attrs}",
+    "attributes": {
+      "label": "Attributes",
+      "source": true,
+      "type": "textarea"
+    },
     "content": {
       "label": "Content",
       "source": true,

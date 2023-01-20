@@ -73,7 +73,11 @@
     },
     "status": "${builder.statusItem}",
     "source": "${builder.source}",
-    "attributes": "${builder.attrs}"
+    "attributes": {
+      "label": "Attributes",
+      "source": true,
+      "type": "textarea"
+    }
   },
   "fieldset": {
     "default": {
