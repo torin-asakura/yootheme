@@ -6,7 +6,7 @@ const searchDir = join(__dirname, '../../')
 
 console.log(`Searching for entries in ${searchDir}`)
 
-const rawEntries = execSync(`find ${searchDir} -name style.css`)
+const rawEntries = execSync(`find ${searchDir} -name style.css -not -path "${searchDir}themes/yootheme/*" `)
 const entries = Buffer.from(rawEntries).toString('utf-8').split('\n').filter(Boolean)
 
 const bumpVersion = (version) => {
